@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>To dos App</title>
+  </head>
+  <body>
+    <h1>Things to do today:</h1>
+      <ul>
+        <% 
+
+        for(let i=0; i<todos.length; i++){ %>
+        <li><%= todos[i] %></li><% } %>
+      </ul>   
+  </body>
+</html>
+
+
+<!-- use <% %> when you do not want to visually see the result of the code -->
+<!-- <% %> for example a for loop or any code -->
+<!-- use <%= %> when you want to visually see the result of the code -->
+<!-- <%= %> for example to print a calculated value --> 

@@ -1,0 +1,86 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+body{
+	background-image: url("assets/background.png");
+	font-family: courier;
+	
+}
+
+a{
+	color: #ff0099;
+}
+
+h1{
+	padding-bottom:10px;
+}
+
+h2{
+	color: #ff0099;
+	padding-bottom:10px;
+}
+
+#separator{
+	text-align:center;
+	color:black;
+}
+
+#kozepre{
+	text-align:center;
+}
+
+p{
+	text-align:center;
+	padding-bottom:20px;
+	line-height:150%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#container{
+	
+	
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+
+#header{
+	background: #333333;
+	text-align:right;
+	font-size:25px;
+	padding:10px 10px 10px 10px;
+	font-weight:bold;
+}
+
+#logoimage{
+	display:inline;
+	width:50px;
+	height:50px;
+	padding:10px 700px 10px 80px;
+}
+
+
+.navilinks{
+	padding-left:20px;
+}
+
+#text{
+	padding:10%;
+}
+
+
+
+
+

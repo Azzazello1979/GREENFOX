@@ -1,0 +1,41 @@
+/*
+
+use order: on individual elements to change their order in css 
+without touching html
+
+use grow OR flex-basis % to set height of elements relative to e.a.
+
+*/
+
+.container {
+  width:300px;
+  height: 100vh; /* 100% of viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+}
+
+
+
+.green{
+  background-color:green;
+  flex-basis:100%;
+  order: 1;
+  
+}
+
+.yellow{
+  background-color:yellow;
+  flex-basis:200%;
+  order: 3;
+  
+}
+
+.purple{
+  background-color:purple;
+  flex-basis:100%;
+  order: 2;
+  
+}
+

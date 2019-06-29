@@ -1,0 +1,62 @@
+<!-- CORS error? Launch site at localhost... -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>XHR Test</title>
+</head>
+<body>
+  <button id="button">Get Text</button>
+  <br>
+  <br>
+  <div id="text"></div>
+<script>
+
+
+
+  document.getElementById('button').addEventListener('click', getText);
+
+
+  function getText() {
+    //console.log('button clicked');
+    let xhr = new XMLHttpRequest();
+    //properties of the xhr object
+    // check out the xhr object: response / responseText / responseURL / status / statusText / timeout / readyState
+    //console.log(xhr); 
+    xhr.open('GET', 'text.txt', true);
+    //xhr.setRequestHeader('Content-Type', 'application/json');
+
+    //used for lprogress bars...
+    /*xhr.onprogress = function(){
+      console.log('READYSTATE: ', xhr.readyState);
+    } */
+
+    xhr.onload = function(){
+      if(this.status === 200){
+        //console.log(this.responseText);
+        document.getElementById('text').innerHTML = this.responseText;
+      } else if (this.status === 404){
+        document.getElementById('text').innerHTML = 'not found';
+      }
+    }
+    xhr.onerror = function(){
+      console.log('Error with xhr request...');
+    }
+    xhr.send();
+}
+
+
+
+
+
+
+
+
+
+
+</script>  
+</body>
+</html>

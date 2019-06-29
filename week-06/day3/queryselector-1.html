@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Workshop: QuerySelector</title>
+  </head>
+  <body>
+    <section class="container">
+      <div id="b325" class="asteroid">The King</div>
+      <div class="asteroid b326">The Conceited Man</div>
+    </section>
+    <p class="asteroid big">The Businessman</p>
+    <div class="asteroid b329 big">The Lamplighter</div>
+
+    <script>
+      //1. store the element that says 'The King' in the 'king' variable.
+      //console.log it.
+      let king = document.getElementById('b325');
+      console.log(king.innerText);
+
+      //2. store 'The Businessman' and 'The Lamplighter'
+      //in the 'businessLamp' variable.
+      //console.log each of them.
+      let businessLamp = document.getElementsByClassName('big');
+      console.log(businessLamp[0].innerText, businessLamp[1].innerText);
+
+
+      //3. store 'The King' and 'The Conceited Man'
+      //in the 'conceitedKing' variable.
+      //alert them one by one.
+      let conceitedKing = document.querySelector('.container').getElementsByClassName('asteroid');
+      alert(conceitedKing[0].innerHTML);
+      alert(conceitedKing[1].innerHTML);
+
+      //4. store 'The King', 'The Conceited Man' and 'The Lamplighter'
+      //in the 'noBusiness' variable.
+      //console.log each of them.
+      let noBusiness = Array.from(document.getElementsByClassName('asteroid'));
+      noBusiness.splice(2,1);
+      console.log(noBusiness[0].innerHTML, noBusiness[1].innerHTML, noBusiness[2].innerHTML);
+ 
+    </script>
+  </body>
+</html>

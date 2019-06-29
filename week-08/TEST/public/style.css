@@ -1,0 +1,70 @@
+body{
+  text-align: center;
+  margin:0;
+}
+
+
+#wrapper{
+  display:flex;
+  justify-content: center;
+}
+
+
+#header{
+  position:fixed;
+  width:100vw;
+  height:30vh;
+  background-image:url(img/maxresdefault.jpg);
+  display:flex;
+  justify-content: flex-start;
+  align-content: center;
+  padding-left:5%;
+  border-width:4px solid black;
+  border-style:outset;
+}
+
+
+#container{
+  margin-top:30vh;
+  width:94vw;
+  margin-left:0 auto;
+  margin-right:0 auto;
+  text-align: center;
+}
+
+
+#main{
+  background-color: #c5d2f9;
+  max-width:69%;
+  float:left;
+  border-width:4px solid black;
+  border-style:outset;
+}
+
+
+#side{
+  background-color: #c5d2f9;
+  max-width:30%;
+  float:right;
+  border-width:4px solid black;
+  border-style:outset;
+}
+
+
+#footer{
+  clear:both;
+  background-color: #1b1d23;
+  width:99%;
+  height:5vh;
+  border-width:4px solid black;
+  border-style:outset;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.sortData{
+  text-align:left;
+  padding:10px;
+}
+
+

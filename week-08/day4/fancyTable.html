@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fancy Table</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      height: 100vh;
+      background-color: cornflowerblue;
+    }
+
+    #mainDiv {
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      width: 100vw;
+      padding: 50px 220px;
+    }
+
+    #fancyTable {
+      border: 1px solid black;
+      border-collapse: collapse;
+      font-size: 3rem;
+      border-radius: 20px;
+      -moz-border-radius: 20px;
+
+    }
+
+
+
+    thead td {
+      color: grey;
+      background: black;
+      border-top: none;
+      border-bottom: 4px solid grey;
+      border-right: 1px solid grey;
+
+    }
+
+    tr:nth-child(odd) {
+      background: white;
+    }
+
+    tr:nth-child(even) {
+      background:#cedaed;
+    }
+
+    td {
+      border: 1px solid black;
+      padding: 20px;
+      width: 70vw;
+      border: 2px solid grey;
+    }
+
+    tbody td:nth-child(even)::before{
+      content:"$";
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <div id="mainDiv">
+    <table id="fancyTable">
+      <thead>
+        <td>Month</td>
+        <td>Sales</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>January</td>
+          <td>50,000.00</td>
+        </tr>
+        <tr>
+          <td>February</td>
+          <td>10,000.00</td>
+        </tr>
+        <tr>
+          <td>March</td>
+          <td>85,000.00</td>
+        </tr>
+        <tr>
+          <td>April</td>
+          <td>56,000.00</td>
+        </tr>
+        <tr>
+          <td>May</td>
+          <td>98,000.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+
+</html>

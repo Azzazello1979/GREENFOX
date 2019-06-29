@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Disable Button</title>
+  <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="mainDiv">
+    <form method="POST" target="/send">
+      <legend>What is your favorite pet?</legend>
+      <input type="radio" name="petName" value="Dog" id="Dog" />
+      <label for="Dog">Dog</label>
+      <input type="radio" name="petName" value="Cat" id="Cat" />
+      <label for="Cat">Cat</label>
+      <input type="radio" name="petName" value="Viktor the goldfish" id="Viktor the goldfish" />
+      <label for="Viktor the goldfish">Viktor the goldfish</label>
+      <hr>
+      <legend>Do you want to sign up for cat facts?</legend>
+      <input type="radio" name="signup" value="yes" id="yes" />
+      <label for="yes">yes</label>
+      <input type="radio" name="signup" value="no" id="no" />
+      <label for="no">no</label>
+      <hr>
+      <input type="submit" value="I love cats" id="btn_cat" disabled />
+      <input type="submit" value="Sign up!" id="btn_signup" disabled />
+    </form>
+  </div>
+
+  <script>
+
+    let enableButton = (event) => {
+      console.log(event.target.id);
+      if (event.target.id !== 'Viktor the goldfish') {
+        document.getElementById('btn_signup').disabled = false;
+      }
+      if (event.target.id === 'yes') {
+        document.getElementById('btn_cat').disabled = false;
+      }
+      if (event.target.id === 'btn_cat'){
+        window.alert(`Thank you, you've successfully signed up for cat facts`);
+      }
+      if (event.target.id === 'btn_signup'){
+        window.alert(`Sigh, we still added you to the cat facts list`);
+      }
+    };
+
+
+
+    const form = document.querySelector('form');
+    form.addEventListener('click', enableButton);
+
+
+
+
+  </script>
+</body>
+
+</html>

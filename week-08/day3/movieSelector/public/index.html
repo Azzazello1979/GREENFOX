@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Movie Selector</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="mainDiv">
+    <form action="/send" method="POST">
+      <legend>Movie Selector</legend>
+      <select name="genre" id="genre">
+        <option value="no-genre">no genre selected</option>
+        <option value="Sci-Fi">Sci-Fi</option>
+        <option value="Drama">Drama</option>
+        <option value="Comedy">Comedy</option>
+      </select>
+    </form>
+    <hr>
+
+    <p></p>
+
+    <script>
+      const database = [
+        { movie: 'Moon', genre: 'Sci-Fi' },
+        { movie: '2001: A Space Odyssey', genre: 'Sci-Fi' },
+        { movie: 'Contact', genre: 'Drama' },
+        { movie: 'Darkest Hour', genre: 'Drama' },
+        { movie: 'There Will Be Blood', genre: 'Comedy' },
+        { movie: 'American Beauty', genre: 'Comedy' },
+        { movie: 'Airplane!', genre: 'Drama' },
+        { movie: 'Deadpool', genre: 'Comedy' },
+        { movie: 'Wayne\'s World', genre: 'Comedy' },
+      ];
+
+      let counter = 0;
+      let genreCheck = (event) => {
+        if (counter === 0) {
+
+
+
+          if (event.target.value === 'Sci-Fi') {
+            /* let sciFiList = [];
+
+            let movieDropDown = document.querySelector('form').appendChild(document.createElement('select'));
+            movieDropDown.name = 'movie';
+            movieDropDown.id = 'movie';
+
+            for (let i = 0; i < database.length; i++) {
+              database[i].genre === 'Sci-Fi' ? sciFiList.push(database[i].movie) : null;
+
+              let option = movieDropDown.appendChild(document.createElement('option'));
+              if (sciFiList[i] !== undefined) {
+                option.value = sciFiList[i];
+                option.innerHTML = sciFiList[i];
+              }
+            }
+            console.log(sciFiList);
+            counter++; */
+          } else if (event.target.value === 'Drama') {
+            let dramaList = [];
+
+            let movieDropDown = document.querySelector('form').appendChild(document.createElement('select'));
+            movieDropDown.name = 'movie';
+            movieDropDown.id = 'movie';
+            console.log(dramaList);
+            for (let i = 0; i < database.length; i++) {
+              database[i].genre === 'Drama' ? dramaList[i] = database[i].movie : null;
+              console.log(typeof dramaList[i]);
+              console.log(dramaList[i]);
+
+
+              let option = movieDropDown.appendChild(document.createElement('option'));
+              if (dramaList[i] !== undefined) {
+                option.value = dramaList[i];
+                option.innerHTML = dramaList[i];
+                console.log('hello');
+              }
+            }
+            console.log(dramaList);
+            counter++;
+          } else if (event.target.value === 'Comedy') {
+            let comedyList = [];
+
+            let movieDropDown = document.querySelector('form').appendChild(document.createElement('select'));
+            movieDropDown.name = 'movie';
+            movieDropDown.id = 'movie';
+
+            for (let i = 0; i < database.length; i++) {
+              database[i].genre === 'Comedy' ? comedyList.push(database[i].movie) : null;
+
+              let option = movieDropDown.appendChild(document.createElement('option'));
+              if (comedyList[i] !== undefined) {
+                option.value = comedyList[i];
+                option.innerHTML = comedyList[i];
+              }
+            }
+            console.log(comedyList);
+            counter++;
+          }
+
+
+
+
+
+
+        }
+      }
+
+
+      /* let movieCheck = (event) => {
+      console.log(event.target.value);
+      }; */
+      let genreDropDown = document.getElementsByTagName('select')[0];
+      genreDropDown.addEventListener('click', genreCheck);
+      /* let movieDropDown = document.getElementsByTagName('select')[1];
+      movieDropDown.addEventListener('click', movieCheck); */
+    </script>
+  </div>
+</body>
+
+</html>

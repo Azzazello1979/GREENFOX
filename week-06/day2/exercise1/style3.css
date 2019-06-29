@@ -1,0 +1,37 @@
+/*
+
+use order: on individual elements to change their order in css 
+without touching html
+
+*/
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+
+.item {
+  height:200px;
+  
+}
+
+.green{
+  background-color:green;
+  flex-basis: 100%;
+  order: 3;
+}
+
+.yellow{
+  background-color:yellow;
+  flex-basis: 200%;
+  order: 2;
+}
+
+.purple{
+  background-color:purple;
+  flex-basis: 100%;
+  order: 1;
+}
+

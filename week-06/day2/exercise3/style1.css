@@ -1,0 +1,19 @@
+.container{
+  height: 400px;
+  display:flex;
+  align-items: center;
+  background-color:yellow;
+  padding:0;
+}
+
+
+
+li.item {
+  margin:0 1% 0 0;
+  list-style-type: none;
+  background-color: purple;
+  width: 200px;
+  height: 200px;
+}
+
+

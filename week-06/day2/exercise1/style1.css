@@ -1,0 +1,27 @@
+/*
+
+using display:flex on parent element stacks up all child elements horizontally,
+uses flrx-direction: row; as default
+
+
+*/
+
+.container {
+  display: flex;
+}
+
+.item {
+  width: 200px;
+  height: 200px;
+}
+.green{
+  background-color: green;
+}
+
+.yellow{
+  background-color: yellow;
+}
+
+.purple{
+  background-color: purple;
+}

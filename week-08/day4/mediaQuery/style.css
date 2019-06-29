@@ -1,0 +1,47 @@
+/*
+
+use flex-basis: % ; to set width of elements proportional to each other, 
+to fill all available screen width.
+
+*/
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width:100vw;
+  height:100vh;
+  
+}
+
+.item {
+  height:200px;
+  
+}
+
+.green{
+  background-color:green;
+  flex-basis: 100%;
+}
+
+.yellow{
+  background-color:yellow;
+  flex-basis: 200%;
+}
+
+.purple{
+  background-color:purple;
+  flex-basis: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .item{
+    flex-basis:100%;
+  }
+
+
+
+}

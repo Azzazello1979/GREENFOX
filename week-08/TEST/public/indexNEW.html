@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form class="firstForm">
+        <div>
+            <select class="selectToFill" name="selectToFill"></select>
+        </div>
+        <div>
+            age
+            <input type="range" step="2" min="0" max="20" class="range" name="range">
+        </div>
+        <div>
+            <input type="color">
+        </div>
+        <div>
+
+            KILLMEPLS
+            <input type="checkbox" checked class="checkbox" name="checkBox">
+        </div>
+        <div>
+
+            <div>
+                <input type="radio" id="huey" name="drone" value="huey" checked>
+                <label for="huey">Huey</label>
+            </div>
+
+            <div>
+                <input type="radio" id="dewey" name="drone" value="dewey">
+                <label for="dewey">Dewey</label>
+            </div>
+
+            <div>
+                <input type="radio" id="louie" name="drone" value="louie">
+                <label for="louie">Louie</label>
+            </div>
+        </div>
+        <input type="submit" value="CHECK">
+    </form>
+    <form class="senddata">
+        <p>Name</p>
+        <input name="name">
+        <p>Age</p>
+        <input name="age" type="number">
+        <button type="submit">Send data</button>
+    </form>
+    <form class="deleteDog">
+        <input name="deleteId" id="deleteId" placeholder="dog id" required>
+        <input type="submit" value="ASD" class="deleteDogButton">
+    </form>
+
+    <div class="responseMessage">
+
+    </div>
+    <h1>
+        Lucky dogs
+    </h1>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Date</th>
+            <th>ID</th>
+            <th>Has home</th>
+            <th>Delete from database</th>
+            <th>Take home</th>
+        </thead>
+        <tbody class="fillable">
+
+        </tbody>
+    </table>
+    <h1>
+        Not so luck dogs :(
+    </h1>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Date</th>
+            <th>ID</th>
+            <th>Has home</th>
+            <th>Delete from database</th>
+            <th>Take home</th>
+        </thead>
+        <tbody class="unlucky">
+
+        </tbody>
+    </table>
+    <script src="index.js"></script>
+</body>
+
+</html>
